@@ -2,10 +2,10 @@ const puppeteer = require('puppeteer');
 
 // 全局参数
 const GLOBAL_DATA = {
-  warehouse_url: 'http://w.dian.so',
-  odev_loginUrl: 'http://o.dian.so/login',
-  odev_chooseRoleUrl: 'http://o.dian.so/identity/choose',
-  role: '财务经理'
+  warehouse_url: '***',
+  odev_loginUrl: '***',
+  odev_chooseRoleUrl: '***',
+  role: '***'
 }
 
 // 延时执行
@@ -60,7 +60,7 @@ puppeteer.launch({headless: false}).then(async browser => {
     await page.setViewport({width: pageProps.screenW, height: pageProps.screenH})
     await page.waitFor(1500)
     await page.screenshot({path: './warehouse/odev-in.png', fullPage: true})
-    await page.type('[placeholder=请输入手机号码]', '15057594294', {delay: 50})
+    await page.type('[placeholder=请输入手机号码]', '***', {delay: 50})
     await page.type('[placeholder=请输入验证码]', '11', {delay: 50})
     await page.screenshot({path: './warehouse/odev-end.png', fullPage: true})
     await page.click('.login-button')
